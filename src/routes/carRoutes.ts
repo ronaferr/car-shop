@@ -9,7 +9,7 @@ const car = new CarModel();
 const carService = new CarService(car);
 const carController = new CarController(carService);
 
-route.post('/car', (req, res) => carController.create(req, res));
+route.post('/cars', (req, res) => carController.create(req, res));
 // route.get('/frame/:id', (req, res) => frameController.readOne(req, res));
 
 export default route;
