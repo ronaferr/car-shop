@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import CarModel from '../../../models/CarModel';
 import { Model } from 'mongoose';
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 import {
 	carsMock,
 	carsMockWithId,
@@ -50,7 +50,7 @@ describe('Cars Model', () => {
     });
   });
 
-  describe('updating a frame', () => {
+  /* describe('updating a frame', () => {
 		it('successfully updates', async () => {
 			const stub = sinon.stub(mongoose, 'isValidObjectId').returns(true);
 			const updated = await carsModel.update('any-id', carsMock)
@@ -72,5 +72,5 @@ describe('Cars Model', () => {
 			expect((error as Error).message).to.be.equal('InvalidMongoId');
 			stub.restore();
 		})
-	})
+	}) */
 });
