@@ -3,7 +3,7 @@ import IService from '../interfaces/IService';
 import { ICar } from '../interfaces/ICar';
 
 export default class CarController {
-  constructor(private _service: IService<ICar>) { }
+  constructor(private _service: IService<ICar>) {}
 
   public async create(
     req: Request,
@@ -13,6 +13,14 @@ export default class CarController {
     const car = { model, year, color, buyValue, doorsQty, seatsQty };
     const results = await this._service.create(car);
     return res.status(201).json(results);
+  }
+
+  public async read(
+    req: Request,
+    res: Response<ICar[]>,
+  ) {
+    const result = await this._service.read();
+    return res.status(200).json(result);
   }
 
   /* public async readOne(
