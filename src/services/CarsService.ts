@@ -1,7 +1,6 @@
 import IService from '../interfaces/IService';
 import { ICar, carZodSchema } from '../interfaces/ICar';
 import { IModel } from '../interfaces/IModel';
-import { ErrorTypes } from '../errors/catalog';
 
 class CarService implements IService<ICar> {
   private _car:IModel<ICar>;

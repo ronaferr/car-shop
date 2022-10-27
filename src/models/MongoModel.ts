@@ -1,4 +1,4 @@
-import { isValidObjectId, Model } from 'mongoose';
+import { Model } from 'mongoose';
 import { IModel } from '../interfaces/IModel';
 
 abstract class MongoModel<T> implements IModel<T> {
